@@ -24,22 +24,26 @@ Numbers are reprsented with integer type, supporting +, -, * and / operators alo
 
 Strings are like in most other languages
 
-"Example of string"
+`"Example of string"`
 
 Rune is a single character string (like in Golang)
 
-'e'
+`'e'`
 
 ### Functions
 
 Functions can be commands (no return value) or have return value. Commands are declared with command keyword. Functions are declared with func keyword followed by it's type
 
+```typescript
 command myCommand(boolean b) {...}
 func integer myIntFunc(string x) {...}
+```
 
 If function has no parameters, void keyword should be provided inside parentesis instead.
 
+```typescript
 func boolean noParams(void) {...}
+```
 
 Functions can be declared inside other functions, but they still act as global, meaning that they are not first class objects and there are no closures.
 
@@ -47,6 +51,7 @@ Functions can be declared inside other functions, but they still act as global, 
 
 Assignment - nothing unusual for primitive types, but complex types can be assigned with block or by accessing some specific property
 
+```typescript
 var repo ClipperFront;
 
 ClipperFront = {
@@ -57,14 +62,17 @@ ClipperFront = {
 }
 
 ClipperFront.branch = "master";
+```
 
 ### If statement
 
 Conditional expression must evaluate to boolean type, else block is optional
 
+```typescript
 if (myParam > 10) {
     return 100;
 }
+```
 
 ### While statement
 
@@ -74,12 +82,14 @@ Conditional expression must evaluate to boolean type. Semantic analyzer will fai
 
 all statements but blocks must end with semicolons
 
+```typescript
 myTypeVar = {
     a = "a value"; // Semicolon inside block
     b = 12;
 } // block, semicolon not required
 
 print(itoa(myInt)); // semicolon required
+```
 
 ## How interpreter works
 
