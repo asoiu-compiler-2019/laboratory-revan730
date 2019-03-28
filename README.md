@@ -121,3 +121,7 @@ When all the rules are checked, interpter begins traversing AST, executing each 
 ### Native TS\JS functions
 
 As this interpreter is written in Typescript, Javascript functions can be wrapped in Shanty function definitions. Example can be seen in stdlib/print.ts. You can also provide library functions as AST definitions, but they will work slower.
+
+### Use case example
+
+Example use case is provided in renderGoApiManifest.st file. Executing it will render kubernetes manifest which can be used to deploy qorbani/golang-hello-world image with one replica. It validates input data, so it won't render invalid manifest.
